@@ -25,4 +25,4 @@ Practicing need to have the following languages compiler/interpreter installed:
 
 ## License
 
-This repository is licensed under the MIT License. See `LICENSE` for more details.
+This repository is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
