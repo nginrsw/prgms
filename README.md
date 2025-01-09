@@ -3,7 +3,7 @@
 This repository contains programming practice examples and exercises using the following languages:
 
 - **Ruby**: A dynamic, open-source programming language focused on simplicity and productivity, often used in web development.
-- **Clojure**: A modern, functional Lisp dialect that runs on the Java Virtual Machine (JVM) and emphasizes immutability and concurrency.
+- **Clojure**: A modern, functional Lisp dialect that runs on the Java Virtual Machine (JVM), emphasizes immutability and concurrency.
 - **Vlang**: A simple and fast programming language that focuses on safety and simplicity.
 - **C/C++**: A pair of powerful, high-performance languages commonly used for system-level programming and application development.
 - **JavaScript**: A versatile, high-level language primarily used for building interactive web applications.
