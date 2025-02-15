@@ -22,3 +22,10 @@ bin/
 # vweb and database
 *.db
 *.js
+
+# Ignore backup files (tilde ~)
+*~
+
+# Ignore Emacs/Vim swap files
+#*#
+.#*
