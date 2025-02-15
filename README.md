@@ -8,6 +8,8 @@ following languages:
   artificial intelligence, and more.
 - **Go**: A statically typed, compiled programming language designed for
   simplicity and efficiency.
+- **V**: A simple, fast, and safe compiled programming language with built-in
+  concurrency, designed for high performance and maintainability.
 
 ---
 
@@ -18,6 +20,9 @@ following languages:
   and machine learning.
 - **Go**: Designed for scalability and performance, making it an excellent
   choice for building efficient and concurrent applications.
+- **V**: A modern programming language with a focus on simplicity, speed, and
+  safety. It has no dependencies, compiles extremely fast, and provides powerful
+  concurrency features.
 
 ---
 
@@ -28,6 +33,7 @@ installed:
 
 - [Go](https://go.dev/)
 - [Python](https://www.python.org/)
+- [V](https://vlang.io/)
 
 ---
 
