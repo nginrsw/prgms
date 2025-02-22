@@ -1,0 +1,65 @@
+<: ---------------------------------------------------------------------------------
+<: Kita harus ketahui dulu, bahwa sifat dari `lua` untuk scope nya adalah global,
+<: hingga kita berikan keyword `local` pada tiap object, maka dia akan berubah jadi 
+<: `private scope`.
+<: ---------------------------------------------------------------------------------
+
+<: Misal ada 2 file:
+<: module.lua & revoke.lua
+
+<: module.lua:
+<: -----------
+	xr = 10
+	
+	function panggil()
+		xv = 11
+		return xv
+	end
+	
+<: revoke.lua
+<: -----------
+	require 'module.lua'
+	
+	print(xr)
+	print(xv)
+	print(panggil())
+	
+<: outputnya akan seperti ini:
+	10
+	nil
+	11
+<: kenapa nil?, karna `xv` posisinya berada di dalam function, pada dasarnya semua yg
+<: ada di dalam blok function adalah local scope untuk function itu sendiri, jadi `revoke.lua`
+<: tidak dapat memanggilnya kecuali function panggil() di "call" terlebih dahulu, baru `xv` bisa
+<: diakses secara global, karna kita deklarasikan function panggil() tadi secara global
+<: (tidak diberikan local keyword seperti misal: `local function panggil()`)
+
+<: jika misal module.lua kita modifikasi seperti ini:
+<: module.lua:
+<: -----------
+	xr = 10
+	
+	function panggil()
+		local xb = 22
+		xv = 11
+		return xb + xv
+	end
+	
+<: kita coba panggil:
+<: revoke.lua:
+<: -----------
+	require 'module.lua'
+	
+	print(panggil())
+	print(xb)
+	print(xv)
+	
+<: outputnya akan seperti ini:
+	33
+	nil
+	11
+
+<: karna sekalipun function panggil di deklarasikan global, kita berikan local keyword ke `xb`
+<: maka dia tidak akan bisa dipanggil keluar, kecuali jika kita gunakan xb sebagai return,
+<: maka "nilai" dari xb akan di kembalikan menjadi kembalian dari fungsi panggil(), ingat
+<: return hanya holding "nilai" dari `xb` bukan holding si variabel `xb` itu sendiri. 
