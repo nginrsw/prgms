@@ -1,0 +1,35 @@
+io.write("masukan angka num ")
+num  = io.read()
+
+s,x = "walternate", local
+t = 'single quote also fine'
+u = [[
+	Double bracket
+	starts and end
+	multi-line str.
+]]
+
+t = nil
+
+while num < 50 do
+	print(num)
+	num = num+1
+end
+	
+if num > 40 then
+	print("its over 40")
+elseif s ~= "walternate" then
+	io.write("not over 40\n")
+else
+	thisIsGlobal = 5
+	io.write("your name pal? ")
+	local line = io.read()
+	print("winter is coming, "..line)
+end
+
+-- undefined variable return nil
+-- this is not an error:
+foo = anUnknownVariable -- now foo is nil
+
+aBoolValue = false
+

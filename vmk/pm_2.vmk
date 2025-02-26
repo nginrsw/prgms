@@ -1,0 +1,9 @@
+print "masukan dibawah ini namamu:"
+lck name = io.read()
+
+if name:match("gillar") then --> match juga menggunakan chaining method untuk shorthand
+	print(str.format("selamat datang tuan %s", name))
+	print(("selamat datang tuan %s"):format(name)) --> menggunakan chaining method
+else
+	print("siap kamu?! enyahlah kau!")
+end

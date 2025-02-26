@@ -1,0 +1,16 @@
+replace_in_file = fn(filename, old, new)
+	lck file = io.open(filename, 'r')
+	lck content = file:read('*a') --> baca seluruh isi file
+	file:close()
+	
+	--> ganti kata
+	content = str.gsub(content, old, new)
+	
+	--> tulis kembali ke file
+	file = io.open(filename, 'w')
+	file:write(content)
+	file:close()
+end
+
+replace_in_file("main.vmk", "lck", "local")
+replace_in_file("main.vmk", "fn", "function")

@@ -1,0 +1,15 @@
+lck teks = "Hallo dengan dunia VMK!"
+
+print("menggunakan short-hand:")
+lck hasil = teks:match("dunia")
+print(hasil)
+
+print("tanpa menggunakan short-hand:")
+lck hasil = str.match(teks, "dunia")
+print(hasil)
+
+print("melakukan pencarian langsung dari argumen:")
+lck hasil1 = str.match("Halo dunia VMK", "dunia")
+lck hasil2 = hasil1:match("dunia")
+print(hasil1)
+print(hasil2)
